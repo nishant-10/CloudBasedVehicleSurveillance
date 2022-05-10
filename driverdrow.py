@@ -15,18 +15,18 @@ freq = 440  # Hz
 mixer.init()
 sound = mixer.Sound("siren.wav")
 try:
-    ind_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                              'driverdata@nishantjoshi.tech', 'ftpadmin')
+    ind_ftp_sess = ftplib.FTP('ftp.dummy',
+                              'dummy', 'dummy')
 except:
     pass
-REMOTE_FTP_SERVER = "ftp.nishantjoshi.tech"
+REMOTE_FTP_SERVER = "ftp.dummy"
 
 try:
     mydb = mysql.connector.connect(
-        host="212.1.210.79",
+        host="dummy",
         user="nishantj_dbuser",
         database="nishantj_MH05EJ4657",
-        password="admin"
+        password="dummy"
     )
 except:
     print("mysql conn error")
@@ -80,10 +80,10 @@ flag = 0
 def captur(path, name):
     try:
         mydb = mysql.connector.connect(
-            host="212.1.210.79",
+            host="dummy",
             user="nishantj_drivdata",
             database="nishantj_MH05EJ4657",
-            password="admin"
+            password="dummy"
         )
 
         print("file name:" + path)

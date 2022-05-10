@@ -2,9 +2,9 @@
         session_start();
         print_r($_SESSION);
         $_SESSION["favcolor"] = "green";
-        $servername = "212.1.210.79";
+        $servername = "dummy";
         $username = "nishantj_dbuser";
-        $password = "admin";
+        $password = "dummy";
         $dbname = "nishantj_MH05EJ4657";
         $GLOBALS["sql"]="SELECT * FROM tabind";
         // Create connection

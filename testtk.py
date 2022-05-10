@@ -3,8 +3,8 @@ import socket
 import ftplib
 imgname = "animal.jpg"
 
-# 212.1.210.79
-REMOTE_SERVER = "ftp.nishantjoshi.tech"
+# dummy
+REMOTE_SERVER = "ftp.dummy"
 
 
 def is_connected(hostname):

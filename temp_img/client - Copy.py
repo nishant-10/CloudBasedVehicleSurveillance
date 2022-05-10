@@ -31,11 +31,11 @@ framerate3 = cap3.get(cv2.CAP_PROP_FPS)
 framecount3 = 0
 # ftpconnections
 try:
-    ind_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                              'indoor@nishantjoshi.tech', 'ftpadmin')
+    ind_ftp_sess = ftplib.FTP('ftp.dummy',
+                              'indoor@dummy', 'ftpdummy')
 except:
     pass
-REMOTE_FTP_SERVER = "ftp.nishantjoshi.tech"
+REMOTE_FTP_SERVER = "ftp.dummy"
 app_status = True
 display1 = Label(imageFrame)
 display1.grid(row=0, column=0, padx=0, pady=2)
@@ -169,10 +169,10 @@ def main_method():
     global framecount1
     try:
         mydb = mysql.connector.connect(
-            host="212.1.210.79",
+            host="dummy",
             user="nishantj_user1",
             database="nishantj_db1",
-            password="admin"
+            password="dummy"
         )
     except:
         pass

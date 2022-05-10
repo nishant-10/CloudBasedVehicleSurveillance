@@ -16,15 +16,15 @@ status_lbl = Label(sync_win, text="Loading...", bd=1,
                    relief=SUNKEN, width=40, anchor=W, pady=5)
 scrollbar = Scrollbar(sync_win)
 try:
-    ind_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                              'indoff@nishantjoshi.tech', 'ftpadmin')
-    out_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                              'outoff@nishantjoshi.tech', 'ftpadmin')
-    drivdata_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                                   'drivdataoff@nishantjoshi.tech', 'ftpadmin')
+    ind_ftp_sess = ftplib.FTP('ftp.dummy',
+                              'indoff@dummy', 'ftpdummy')
+    out_ftp_sess = ftplib.FTP('ftp.dummy',
+                              'outoff@dummy', 'ftpdummy')
+    drivdata_ftp_sess = ftplib.FTP('ftp.dummy',
+                                   'drivdataoff@dummy', 'ftpdummy')
 except:
     pass
-REMOTE_FTP_SERVER = "ftp.nishantjoshi.tech"
+REMOTE_FTP_SERVER = "ftp.dummy"
 
 
 def is_connected(hostname1):
@@ -54,10 +54,10 @@ def fupload(name, path, opt):
     if is_connected(REMOTE_FTP_SERVER):
         try:
             mydb = mysql.connector.connect(
-                host="212.1.210.79",
+                host="dummy",
                 user="nishantj_filesync",
                 database="nishantj_MH05EJ4657",
-                password="admin"
+                password="dummy"
             )
 
             print("file name:" + path)

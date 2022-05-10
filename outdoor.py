@@ -9,18 +9,18 @@ import threading
 
 
 try:
-    ind_ftp_sess = ftplib.FTP('ftp.nishantjoshi.tech',
-                              'outdoor@nishantjoshi.tech', 'ftpadmin')
+    ind_ftp_sess = ftplib.FTP('ftp.dummy',
+                              'outdoor@dummy', 'ftpdummy')
 except:
     pass
-REMOTE_FTP_SERVER = "ftp.nishantjoshi.tech"
+REMOTE_FTP_SERVER = "ftp.dummy"
 
 try:
     mydb = mysql.connector.connect(
-        host="212.1.210.79",
+        host="dummy",
         user="nishantj_dbuser",
         database="nishantj_MH05EJ4657",
-        password="admin"
+        password="dummy"
     )
 except:
     print("mysql conn error")
@@ -45,10 +45,10 @@ def is_connected(hostname):
 def captur(path, name):
     try:
         mydb = mysql.connector.connect(
-            host="212.1.210.79",
+            host="dummy",
             user="nishantj_outdoor",
             database="nishantj_MH05EJ4657",
-            password="admin"
+            password="dummy"
         )
 
         print("file name:" + path)
